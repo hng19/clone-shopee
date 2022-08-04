@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;0,900;1,400&display=swap');
+:root {
+    --header-height: 120px;
+    --header-height-navbar: 40px;
+    --header-height-menu: calc(var(--header-height) - var(--header-height-navbar))
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+header a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header{
+    background: linear-gradient(-180deg,#f53d2d,#f63);
+    color: #ffffff;
+    font-size: 15px;
+    height: var(--header-height);
+}
+
+.header__navbar{
+    font-size: 15px;
+    height: var(--header-height-navbar);
+}
+
+.header__navbar-list ,.header__navbar-left-item,.header__navbar-right-item,.header__navbar,.header__menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__navbar-list li{
+    margin: 0 8px;
+}
+
+.header__navbar-right-item-strong{
+    font-weight: 510;
+}
+
+.header__navbar-left-item,.header__navbar-right-item{
+    position: relative;
+    cursor: pointer;
+}
+
+.header__navbar-item-line::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #fb9086;
+    height: 12px;
+    top: 10%;
+    right: -10px;
+}
+
+.header__menu{
+    height: var(--header-height-menu);
+}
+
+.header__menu-logo{
+    width: 150px;
+    height: 50px;
+    margin: 0 8px;
+}
+
+.header__menu-searchbar{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    width: 840px;
+    height: var(--header-height-navbar);
+}
+
+.header__menu-input{
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.header__menu-input__input{
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 0.625rem;
+    outline: none;
+    border: none;
+    height: var(--header-height-navbar);
+    text-transform: uppercase;
+    width: 600px;
+}
+
+.header__menu-option{
+   cursor: pointer;
+}
+
+.header__menu-selected{
+    color: #000;
+    height: var(--header-height-navbar);
+    display: flex;
+    align-items: center;
+    border-left: 1px solid rgba(0,0,0,.09);
+    padding: 0 0 0 10px;
+    height: 75%;
+    margin-top: 5px;
+}
+
+.fa-chevron-down{
+    margin-left: 20px;
+    font-size: 10px;
+}
+
+.header__menu-btn{
+    width: 64px;
+    margin: 2px;
+    color: #fff;
+    border: none;
+    background: #fb5831;
+    cursor: pointer;
+}
+
+.fa-cart-shopping{
+    width: 90px;
+    font-size: 20px;
+}
+
+.icon-shopee-logo {
+    width: 8.875rem;
+    height: 3rem;
+    fill: #fff;
+}
