@@ -7,7 +7,7 @@
     --footer-header: rgba(0, 0, 0, .54);
     --border-color: #dbdbdb;
     --star-gold-color: #ffce3e;
-    --border-line: #0000003b;
+    --border-line: rgba(0, 0, 0, .09);
     --header-height: 120px;
     --header-height-navbar: 40px;
     --header-height-menu: calc(var(--header-height) - var(--header-height-navbar))
@@ -107,12 +107,12 @@ a {
 
 header a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--white-color);
 }
 
 header {
     background: linear-gradient(-180deg, #f53d2d, #f63);
-    color: #ffffff;
+    color: var(--white-color);
     font-size: 15px;
     height: var(--header-height);
 }
@@ -146,6 +146,41 @@ header {
     cursor: pointer;
 }
 
+.header__qr {
+    background-color: var(--white-color);
+    width: 180px;
+    position: absolute;
+    left: 0;
+    top: 200%;
+    border-radius: 3px;
+    overflow: hidden;
+    display: none;
+}
+
+.header__navbar-left-item--has-qr:hover .header__qr {
+    display: block;
+    z-index: 2;
+}
+
+.header__qr-apps {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0.9375rem 0.3125rem;
+}
+
+.header__qr-download-item {
+    width: 4.375rem;
+    margin-top: 0.3125rem;
+}
+
+.header__qr-download-img {
+    width: 100%;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
 .header__navbar-item-line::after {
     content: "";
     display: block;
@@ -167,7 +202,7 @@ header {
 }
 
 .header__menu-searchbar {
-    background-color: #ffffff;
+    background-color: var(--white-color);
     display: flex;
     justify-content: space-between;
     width: 840px;
@@ -175,8 +210,8 @@ header {
 }
 
 .header__menu-input {
-    background-color: #fff;
-    border-color: #fff;
+    background-color: var(--white-color);
+    border-color: var(--white-color);
 }
 
 .header__menu-input__input {
@@ -200,7 +235,7 @@ header {
     height: var(--header-height-navbar);
     display: flex;
     align-items: center;
-    border-left: 1px solid rgba(0, 0, 0, .09);
+    border-left: 1px solid var(--border-line);
     padding: 0 0 0 10px;
     height: 75%;
     margin-top: 5px;
@@ -214,7 +249,7 @@ header {
 .header__menu-btn {
     width: 64px;
     margin: 2px;
-    color: #fff;
+    color: var(--white-color);
     border: none;
     background: #fb5831;
     cursor: pointer;
@@ -228,12 +263,12 @@ header {
 .icon-shopee-logo {
     width: 8.875rem;
     height: 3rem;
-    fill: #fff;
+    fill: var(--white-color);
 }
 
 .footer__banner-space {
     height: var(--header-height);
-    background-color: #fff;
+    background-color: var(--white-color);
     border-top: 4px solid var(--primary-color);
 }
 
@@ -241,7 +276,7 @@ header {
     width: 1200px;
     margin-top: 3.75rem;
     padding-bottom: 1.875rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .09);
+    border-bottom: 1px solid var(--border-line);
     margin: 85px auto;
 }
 
@@ -404,7 +439,7 @@ header {
 }
 
 .certificate-option__item:not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, .09);
+    border-right: 1px solid var(--border-line);
 }
 
 .certificate-option__item-link {
