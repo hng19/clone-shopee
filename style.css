@@ -7,6 +7,7 @@
     --footer-header: rgba(0, 0, 0, .54);
     --border-color: #dbdbdb;
     --star-gold-color: #ffce3e;
+    --border-line: #0000003b;
     --header-height: 120px;
     --header-height-navbar: 40px;
     --header-height-menu: calc(var(--header-height) - var(--header-height-navbar))
@@ -304,7 +305,7 @@ header {
 
 .footer__download-qr {
     height: 80px;
-    border: 1px solid #0000003b;
+    border: 1px solid var(--border-line);
 }
 
 .footer__download-apps {
@@ -339,5 +340,24 @@ header {
 }
 
 .footer__option {
-    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #f5f5f5;
+}
+
+.footer__option-item {
+    border-bottom: 1px solid var(--border-line);
+}
+
+.footer__heading-item {
+    font-size: 14px;
+    color: var(--footer-header);
+}
+
+.link-item__nation {
+    text-decoration: none;
+    color: var(--footer-header);
+}
+
+.nation-link {
+    border-right: 1px solid rgba(0, 0, 0, .2);
 }
