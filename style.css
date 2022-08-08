@@ -177,6 +177,7 @@ header {
 .header__qr-download-item {
     width: 4.375rem;
     margin-top: 0.3125rem;
+    margin-right: 5px;
 }
 
 .header__qr-download-img {
@@ -193,7 +194,7 @@ header {
     width: 400px;
     position: absolute;
     right: 0;
-    top: 200%;
+    top: 140%;
     transform-origin: calc(100%-20px) top;
     animation: headerNotifyGrowth ease-in-out 0.25s;
     display: none;
@@ -201,10 +202,11 @@ header {
 
 .header__notification::before {
     content: "";
-    border: 20px solid;
+    border-width: 30px 40px;
+    border-style: solid;
     border-color: transparent transparent var(--white-color) transparent;
     position: absolute;
-    right: 12px;
+    right: 0px;
     top: -40px;
 }
 
@@ -258,7 +260,7 @@ header {
 }
 
 .notify-footer--btn:hover {
-    color: #ee4d2d;
+    color: var(--primary-color);
     background-color: #ddd;
 }
 
@@ -314,12 +316,38 @@ header {
 .header__menu-selected {
     color: #000;
     height: var(--header-height-navbar);
+    position: relative;
     display: flex;
     align-items: center;
     border-left: 1px solid var(--border-line);
     padding: 0 0 0 10px;
     height: 75%;
     margin-top: 5px;
+}
+
+.menu-selected--option {
+    background-color: var(--white-color);
+    width: 170px;
+    position: absolute;
+    bottom: -85px;
+    left: -10px;
+    border-radius: 2px;
+    border: 1px solid #ededed85;
+    display: none;
+}
+
+.header__menu-option:hover .menu-selected--option {
+    display: block;
+}
+
+.option-selected {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-check {
+    color: var(--primary-color);
 }
 
 .fa-chevron-down {
@@ -339,6 +367,49 @@ header {
 .fa-cart-shopping {
     width: 90px;
     font-size: 20px;
+}
+
+.header__menu-cart {
+    position: relative;
+}
+
+.header__product {
+    border: 1px solid #d3d3d3;
+    background-color: var(--white-color);
+    width: 400px;
+    position: absolute;
+    right: 40%;
+    top: 180%;
+    transform-origin: calc(100%-20px) top;
+    animation: headerNotifyGrowth ease-in-out 0.25s;
+    display: none;
+}
+
+.header__product::before {
+    content: "";
+    border-width: 30px 40px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 0px;
+    top: -40px;
+}
+
+.header__menu-cart:hover .header__product {
+    display: block;
+}
+
+.header__product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    font-size: 13px;
+}
+
+.header__product-img {
+    width: 140px;
+    opacity: 0.5;
 }
 
 .icon-shopee-logo {
