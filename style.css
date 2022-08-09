@@ -421,7 +421,7 @@ header {
 .footer__banner-space {
     height: var(--header-height);
     background-color: var(--white-color);
-    border-top: 4px solid var(--primary-color);
+    border-top: 2px solid var(--primary-color);
 }
 
 .footer__banner-space-bottom {
