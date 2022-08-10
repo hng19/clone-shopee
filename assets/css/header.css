@@ -264,6 +264,7 @@ header {
 
 .header__menu-cart {
     position: relative;
+    cursor: pointer;
 }
 
 .header__product {
