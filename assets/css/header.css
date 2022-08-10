@@ -277,6 +277,7 @@ header {
     transform-origin: calc(100%-20px) top;
     animation: headerNotifyGrowth ease-in-out 0.25s;
     display: none;
+    z-index: 1;
 }
 
 .header__product::before {
